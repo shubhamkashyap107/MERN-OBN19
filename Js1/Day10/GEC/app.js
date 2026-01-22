@@ -11,10 +11,11 @@ function xyz()
 }
 
 var b = xyz()
+console.log(a)
 b()
 
 
-//
+////////////////////////////
 
 function one()
 {
