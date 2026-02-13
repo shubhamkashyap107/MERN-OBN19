@@ -2,18 +2,21 @@ const obj = {
     name :  "Rohan",
     age : 12,
     isPresent : true,
-    sayHi : function()
+    sayHi : function() // method
     {
         console.log("hi " + obj.name)
     },
     sayHello : function() {
         console.log("Hello " + this.name)
-    }
+    },
+    colors : ["red", "black", "blue"]
 }
 
 obj.sayHi()
 obj.sayHello()
-console.log(obj)
+console.log(obj.colors[0])
+console.log(obj.colors[1])
+console.log(obj.colors[2])
 
 
 // let temp = obj.name
