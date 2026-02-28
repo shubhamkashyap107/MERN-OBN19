@@ -60,14 +60,18 @@ let arr = [
 
 
 arr.sort((a,b) => {
-    let diff = a.age - b.age
+    // let diff = a.age - b.age
 
-    if(diff == 0)
-    {
-        return b.name.localeCompare(a.name)
-    }
+    // if(diff == 0)
+    // {
+    //     return b.name.localeCompare(a.name)
+    // }
 
-    return diff
+    // return diff
+
+    return a.age - b.age == 0  ? b.name.localeCompare(a.name) :  a.age - b.age
+
+
 })
 
 
