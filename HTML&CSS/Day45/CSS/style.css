@@ -1,0 +1,61 @@
+/* div{
+    background-color: yellow;
+} */
+
+/* 
+p{
+    background-color: red;
+} */
+
+/* 
+h1{
+    background-color: gray;
+} */
+
+/* 
+#heading{
+    background-color: pink;
+}
+
+.same-headings{
+    background-color: red;
+}
+
+div{
+    background-color: green;
+} */
+/* 
+
+a{
+    text-decoration: none;
+    color:  white;
+    background-color: black;
+    font-family: sans-serif;
+} */
+
+
+.mypara {
+    color: white;
+    background-color: blue;
+    font-size: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* line-height: 130px; */
+    /* word-spacing: 50px; */
+    /* letter-spacing: 20px; */
+    /* font-weight: 900; */
+    text-align: right;
+    text-decoration: underline;
+}
+
+#xyz{
+    color : blue
+}
+
+
+#dabba{
+    /* background-color: red; */
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+}
+
