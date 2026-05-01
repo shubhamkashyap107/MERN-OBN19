@@ -1,0 +1,46 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.box{
+    border: 5px solid red;
+    height: 200px;
+    width: 200px;
+    /* padding: 20px; */
+
+    /* padding-top: 30px;
+    padding-left: 50px; */
+
+    padding: 20px 40px 50px;
+
+    /* margin: 40px; */
+
+
+    /* margin-top: 50px; */
+    /* margin-bottom: 50px; */
+
+    margin: 40px 50px 60px;
+}
+
+
+#test{
+    height: 200px;
+    width: 200px;
+    background-color: yellow;
+    padding: 100px;
+    box-sizing: border-box;
+}
+
+
+.x{
+    border: 1px solid black;
+}
+
+nav{
+    width: 100vw;
+    height: 50px;
+    background-color: black;
+}

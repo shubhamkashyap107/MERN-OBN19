@@ -1,0 +1,52 @@
+/* #box{
+    background-color: yellow;
+    width: 200px;
+    height: 200px;
+} */
+
+
+/* #box{
+    background-color: yellow;
+    width: 50vw;
+    height: 50vh;
+} */
+
+/* 
+#outer{
+    background-color: yellow;
+    height: 300px;
+    width: 80vw;
+}
+
+
+#inner{
+    background-color: green;
+    height: 50%;
+    width: 50%;
+}
+ */
+
+#text{
+    font-size: 0.5rem;
+}
+
+#text2{
+    font-size: 32px;
+}
+
+
+#outer{
+    font-size: 20px;
+}
+
+#middle{
+    font-size: 2em;
+}
+
+#inner{
+    font-size: 2em;
+}
+
+#test{
+    font-size: 2em;
+}

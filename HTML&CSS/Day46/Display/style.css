@@ -1,0 +1,27 @@
+/* #b{
+    border: 1px solid black;
+}
+#p{
+    border: 1px solid red;
+} */
+
+#s{
+    border: 1px solid black;
+    height: 300px;
+    width: 300px;
+}
+
+.box{
+    border: 1px solid black;
+    height: 200px;
+    width: 200px;
+    display: inline-block;
+}
+
+
+.box2{
+    border: 1px solid black;
+    height: 200px;
+    width: 200px;
+    display :inline-block;
+}
