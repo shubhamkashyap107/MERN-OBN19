@@ -1,0 +1,31 @@
+.parent{
+    border: 5px solid red;
+    width: fit-content;
+    margin-top: 100px;
+}
+
+
+.children{
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+    display: inline-block;
+}
+
+#static-special{
+    position: static;
+    left:  100px;
+}
+
+#relative-special{
+    position: relative;
+    bottom: 50px;
+}
+
+
+#absolute-special{
+    position: absolute;
+    left: 40px;
+    top: 40px;
+    background-color: red;
+}
