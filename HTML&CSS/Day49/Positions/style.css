@@ -1,0 +1,40 @@
+#parent{
+    border: 2px solid black;
+    display: flex;
+    width: fit-content;
+    margin-bottom: 100px;
+}
+
+.child{
+    height: 200px;
+    width: 200px;
+}
+
+
+#static-child{
+    /* position: static; */
+    top: 100px;
+}
+
+#relative-child{
+    position: relative;
+    bottom: 50px;
+}
+
+#absolute-child{
+    position: absolute;
+    right: 100px;
+}
+
+#fixed-special{
+    position: fixed;
+    right: 0px;
+    top: 0px;
+}
+
+
+#sticky-special{
+    position: sticky;
+    top: 100px;
+    left: 100px;
+}
