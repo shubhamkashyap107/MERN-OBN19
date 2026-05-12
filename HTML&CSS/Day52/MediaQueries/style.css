@@ -1,0 +1,143 @@
+/* *{
+    margin: 0px;
+    padding: 0px;
+}
+
+#main{
+    border: 5px solid black;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.inner{
+    background-color: red;
+    height: 200px;
+    width: 200px;
+}
+
+
+@media (max-width : 1000px) {
+    #main{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+}
+
+@media (max-width : 750px){
+    #main{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .inner{
+        background-color: yellow;
+    }
+}
+
+@media (max-width : 500px){
+    #main{
+        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .inner{
+        background-color: green;
+    }
+} */
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#navbar{
+    width: 100vw;
+    background-color: blue;
+    color: white;
+    height: 8vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   
+}
+
+#container{
+    display: flex;
+}
+
+#sidebar{
+    width: 20vw;
+    height: 92vh;
+    background-color: red;
+}
+
+#main{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* background-color: yellow; */
+    width: 80vw;
+    gap: 8px;
+    /* border: 2px solid purple; */
+    height: 92vh;
+    overflow: scroll;
+}
+
+.boxes{
+    background-color: yellow;
+    /* height: 50%; */
+}
+
+
+@media(max-width : 1000px){
+    #main{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .boxes{
+        height: 400px;
+    }
+}
+
+
+@media(max-width : 800px){
+    #main{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .boxes{
+        height: 400px;
+    }
+}
+
+@media(max-width : 600px){
+    #main{
+        display: flex;
+        flex-direction: column;
+        overflow: scroll;
+        /* border: 5px solid red; */
+        width: 100%;
+        gap: 20px;
+    }
+
+    .boxes{
+        /* height: 400px; */
+        flex-shrink: 0;
+        width: 100vw;
+    }
+
+    #sidebar{
+        height: 8vh;
+        width: 100vw;
+    }
+
+    #container{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .links{
+        display: none;
+    }
+}

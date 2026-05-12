@@ -1,0 +1,55 @@
+:root{
+    --navbar-bg-color : #E3B04B;
+    --content-bg-color : #F1D6AB;
+    --content-height : 200px
+}
+
+
+#b1{
+    border: 2px solid red;
+    background-color: var(--content-bg-color);
+    height: var(--content-height);
+}
+
+#b2{
+    border: 4px solid green;
+    background-color: var(--content-bg-color);
+}
+
+#b3{
+    border: 1px dotted red;
+    background-color: var(--content-bg-color);
+
+}
+
+nav{
+    background-color: var(--navbar-bg-color);
+}
+
+.abc{
+    --bg-color : red;
+}
+
+.abc{
+    background-color: var(--bg-color);
+}
+
+.xyz{
+    background-color: var(--bg-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
