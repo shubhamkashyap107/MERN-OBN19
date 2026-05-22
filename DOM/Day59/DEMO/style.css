@@ -1,0 +1,29 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 50px;
+    background-color: blue;
+    color: white;
+}
+
+#btns{
+    display: flex;
+    gap: 20px;
+}
+
+#text{
+    height: 100vh;
+}
+
+#ip{
+    border: none;
+    outline: none;
+    padding: 8px;
+    border-radius: 12px;
+    width: 10%;
+}
