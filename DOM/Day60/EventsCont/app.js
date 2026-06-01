@@ -6,8 +6,6 @@ const cardContainer = document.getElementById("right")
 
 addBtn.addEventListener("click", () => {
 
-    // handle empty inputs
-
     if(!titleBar.value || !descBar.value)
     {
         alert("Please enter both the fields")
@@ -36,5 +34,4 @@ addBtn.addEventListener("click", () => {
 
     titleBar.value = ""
     descBar.value = ""
-
 })

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #outer{
+            height: 300px;
+            width: 300px;
+            background-color: red;
+        }
+
+        #middle{
+            height: 200px;
+            width: 200px;
+            background-color: yellow;
+        }
+
+        #inner{
+            height : 100px;
+            width: 100px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Event Bubbling & Capturing</h1>
+
+
+    <div id="outer">
+        <div id="middle">
+            <div id="inner"></div>
+        </div>
+    </div>
+
+
+    <script src="./app.js"></script>
+</body>
+</html>
