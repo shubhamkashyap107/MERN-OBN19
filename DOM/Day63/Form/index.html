@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .msg{
+            color: red;
+            font-size: 8px;
+            display: none;
+            /* visibility: */
+        }
+    </style>
+</head>
+<body>
+    <h1>Form Validation</h1>
+
+    <div>
+
+        <div>
+            <label for="">Username</label>
+            <input id="un" type="text">
+            <p id="unmsg" class="msg">Username must be 4-8 characters</p>
+        </div>
+
+
+        <div>
+            <label for="">Email</label>
+            <input id="em" type="text">
+            <p id="emmsg" class="msg">Please enter a valid email</p>
+        </div>
+
+        <div>
+            <label for="">Password</label>
+            <input id="pw" type="password">
+            <p id="pwmsg" class="msg">Please enter a strong password</p>
+        </div>
+
+        <div>
+            <label for="">Age</label>
+            <input id="age" type="number">
+            <p id="agemsg" class="msg">Age must be atleast 18 yrs</p>
+        </div>
+
+        <button id="btn">Submit</button>
+
+
+    </div>
+
+
+    <script src="./app.js"></script>
+</body>
+</html>

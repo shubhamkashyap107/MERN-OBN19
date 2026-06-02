@@ -56,11 +56,12 @@ for(let item of allContainers)
         {
             card.style.border = "2px solid yellow"
         }
-        else{
+        else if(e.target.id == "completed-cards-container"){
             card.style.border = "2px solid green"
         }
-
-        e.target.append(card)
+        // console.log(e.target.tagName)
+        e.target.tagName != "ARTICLE" && e.target.append(card)
+        // e.target.append(card)
 
     })
 }
