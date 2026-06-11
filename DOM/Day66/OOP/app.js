@@ -1,25 +1,25 @@
-// class Parent{
-//     constructor(nm)
-//     {
-//         this.name = nm
-//     }
-//     greet()
-//     {
-//         console.log("Namaste")
-//     }
-// }
-// class Child extends Parent{
-//     constructor(nm, ag)
-//     {
-//         super(nm)
-//         this.age = ag
-//     }
+class Parent{
+    constructor(nm)
+    {
+        this.name = nm
+    }
+    greet()
+    {
+        console.log("Namaste")
+    }
+}
+class Child extends Parent{
+    constructor(nm, ag)
+    {
+        super(nm)
+        this.age = ag
+    }
 
-//     greet()
-//     {
-//         console.log("Hello")
-//     }
-// }
+    greet()
+    {
+        console.log("Hello")
+    }
+}
 // const p = new Parent("Qwerty")
 // const c = new Child("Xyz", 12)
 // console.log(p)
