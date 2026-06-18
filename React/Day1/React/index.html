@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="root">
+
+    </div>
+
+
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <script>
+        const root = ReactDOM.createRoot(document.getElementById("root"))
+
+        // let myDiv = React.createElement("div", {id : "qwerty", class : "haina"}, "Hello world")
+        // let heading = React.createElement("h1", {class : "Hello", style : {color : "red", backgroundColor : "yellow"}}, "Hey")
+
+        // root.render(myDiv)
+        // root.render(heading)
+
+
+        // root.render([myDiv, heading]) // react is able to render/display array of react elements.
+
+        // const parent = React.createElement("div", null, React.createElement("p", null, "Hello from p tag"))
+        // const ul = React.createElement("ul", null, [
+        //     React.createElement("li", null, 1),
+        //     React.createElement("li", null, 2), 
+        //     React.createElement("li", null, 3) 
+        // ])
+
+        // root.render([parent, ul])
+
+        const navbar = React.createElement("nav", { className : "abc",style : {backgroundColor : "blue", display : "flex", justifyContent  : "space-between", alignItems : "center"}}, [
+            React.createElement("h2", {}, "LOGO"),
+            React.createElement("div", {}, [
+                React.createElement("a", {}, "A"),
+                React.createElement("a", {}, "B"),
+                React.createElement("a", {}, "C"),
+            ])
+        ])
+
+
+        root.render(navbar)
+
+
+    </script>
+    
+</body>
+</html>
