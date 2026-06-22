@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>React CDN</title>
+</head>
+<body>
+
+<div id="root"></div>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.28.4/babel.min.js" integrity="sha512-BCw4VuBF2HKIgxDP8K7DRHcHzazAAND+5+2E7GgX3CC1u1pteJ415mMJlQfUORjkFT64irzu1jIV93Vfvzkevw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script type="text/babel">
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+
+        function KuchBhi() {
+            return <h1>Hello World</h1>;
+        }
+
+        function Navbar()
+        {
+            return <nav className="qwertyu" id="navbar" style={{backgroundColor : "blue", display : "flex", justifyContent : "space-between"}}>
+                <h3>LOGO</h3>
+                <div>
+                    <a href="">A</a>    
+                    <a href="">B</a>    
+                    <a href="">C</a>    
+                    <a href="">D</a>    
+                </div>    
+            </nav>
+        }
+
+        root.render(Navbar());
+    </script>
+
+</body>
+</html>
