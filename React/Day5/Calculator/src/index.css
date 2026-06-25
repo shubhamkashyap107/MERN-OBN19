@@ -1,0 +1,46 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#screen{
+    height: 100vh;
+    /* background-color: lightblue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#calc{
+    height: fit-content;
+    width: fit-content;
+    border: 1px solid lightgrey;
+    /* background-color: lightyellow; */
+    padding: 20px;
+    border-radius: 20px;
+}
+
+#display{
+    text-align: right;
+    font-size: 48px;
+    padding: 0px 20px;
+}
+
+#btns-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.btn{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border : none;
+    cursor: pointer;
+    background-color: lightblue;
+}
+
+.btn:hover{
+    background-color: rgb(143, 143, 241);
+}
