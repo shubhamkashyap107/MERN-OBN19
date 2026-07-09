@@ -1,4 +1,4 @@
-import React from "react";
+import toast from "react-hot-toast"
 
 const Card = ({ info, setCart, cart }) => {
   const { description, title, price, rating, images } = info;
@@ -67,7 +67,7 @@ const Card = ({ info, setCart, cart }) => {
             
           }
         
-
+          toast.success(`${info.title} added to cart`)
 
          }}
          className="mt-2 w-full rounded-xl bg-blue-600 py-3 text-white font-semibold hover:bg-blue-700 transition">

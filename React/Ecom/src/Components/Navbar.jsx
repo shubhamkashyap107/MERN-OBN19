@@ -1,6 +1,23 @@
+import { useEffect, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({cart}) => {
+  
+
+  const[totalItems, setTotalItems] = useState(0)
+
+  useEffect(() => {
+    let temp = 0
+
+    for(let item of cart)
+    {
+      temp += item.q
+    }
+
+    setTotalItems(temp)
+
+  }, [cart])
+
   const nav = useNavigate();
 
   const navLinkStyle = ({ isActive }) =>
@@ -25,9 +42,26 @@ const Navbar = () => {
             Products
           </NavLink>
 
-          <NavLink to="/cart" className={navLinkStyle}>
-            Cart
+
+
+
+          <NavLink
+            to="/cart"
+            className={`${navLinkStyle} relative flex items-center`}
+          >
+            <span className="text-black">Cart</span>
+
+            {totalItems > 0 && (
+              <span className="absolute -top-2 -right-3 flex h-5 w-5 items-center justify-center rounded-full bg-red-600 text-xs font-semibold text-white shadow-md">
+                {totalItems}
+              </span>
+            )}
           </NavLink>
+
+
+
+
+          
 
           <NavLink to="/profile" className={navLinkStyle}>
             Profile
