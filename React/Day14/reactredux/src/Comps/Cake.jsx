@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux"
-import { buyCake, restockCake} from "../Utils/redux/Store"
+import { buyCake, restockCake} from "../Utils/redux/Cake"
 import { useState } from "react"
 
 const Cake = () => {
@@ -7,13 +7,13 @@ const Cake = () => {
     const dispatch = useDispatch()
     const[q, setQ] = useState(0)
 
-    const val = useSelector((store) => {
-        return store.numOfCakes
+    const {numOfCakes} = useSelector((store) => {
+        return store.cake
     })
 
   return (
     <div>
-        <h1>Num of cakes : {val}</h1>
+        <h1>Num of cakes : {numOfCakes}</h1>
         <input type="number" onChange={(e) => {
             setQ(e.target.value)
         }} />
