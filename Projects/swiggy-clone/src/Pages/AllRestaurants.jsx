@@ -1,20 +1,37 @@
-import React, { useEffect, useState } from 'react'
+import React, { memo, useEffect, useState } from 'react'
+import Navbar from '../Components/Navbar'
+import { useSelector } from 'react-redux'
 
-const AllRestaurants = ({position}) => {
+const AllRestaurants = () => {
 
     const[apiData, setApiData] = useState(null)
+    console.log(apiData)
+    const position = useSelector(store => store.location)
+    
    
 
     useEffect(() => {
-        if(position)
+        if(position.data)
         {
-            fetch(import.meta.env.VITE_API + `lat=${position.latitude}&lng=${position.longitude}`)
+            fetch(import.meta.env.VITE_API + `lat=${position.data.latitude}&lng=${position.data.longitude}`)
+            .then((res) => {
+              return res.json()
+            })
+            .then((data) => {
+              setApiData(data)
+            })
         }
     }, [position])
 
   return (
-    <div>AllRestaurants</div>
+    <>
+      <Navbar />
+
+      <div>
+
+      </div>
+    </>
   )
 }
 
-export default AllRestaurants
+export default memo(AllRestaurants)

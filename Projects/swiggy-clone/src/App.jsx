@@ -2,23 +2,27 @@ import React, { useEffect, useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Landing from './Pages/Landing'
 import AllRestaurants from './Pages/AllRestaurants'
+import { useDispatch } from 'react-redux'
+import { getData } from './Utils/LocationSlice'
+
 
 const App = () => {
-  const[position, setPosition] = useState(null)
 
+  const dispatch = useDispatch()
+ 
 
   useEffect(() => {
-    window.navigator.geolocation.getCurrentPosition((position) => {
-      setPosition(position.coords)
-    })
+    dispatch(getData())
   }, [])
 
   return (
     <div>
+
+     
       
       <Routes>
         <Route path='/' element={<Landing />} />
-        <Route path='/restaurants' element={<AllRestaurants position={position} />} />
+        <Route path='/restaurants' element={<AllRestaurants />} />
       </Routes>
 
 
