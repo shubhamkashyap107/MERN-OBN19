@@ -1,8 +1,11 @@
+import { useNavigate } from "react-router-dom"
+
 const cloudUrl = import.meta.env.VITE_CLOUD_URL
 
 const Recommendations = ({title, info}) => {
 
     // console.log(info)
+    const nav = useNavigate()
 
   return (
     <section className="w-[70vw] mx-auto">
@@ -19,7 +22,10 @@ const Recommendations = ({title, info}) => {
 
         <div className="flex overflow-scroll scrollbar-none">
             {info.map((item) => {
-                return <img key={item.id} className="h-50" src={cloudUrl + item.imageId} />
+                // console.log(item.action.link.slice(35, 40))
+                return <img onClick={() => {
+                    nav(`/restaurants/${item.action.link.slice(35, 40)}`)
+                }} key={item.id} className="h-50 cursor-pointer" src={cloudUrl + item.imageId} />
             })}
         </div>
     </section>
@@ -28,3 +34,5 @@ const Recommendations = ({title, info}) => {
 
 export default Recommendations
 
+
+// https://www.swiggy.com/collections/83633?collection_id=83633&search_context=northindian&tags=layout_CCS_NorthIndian&type=rcv2

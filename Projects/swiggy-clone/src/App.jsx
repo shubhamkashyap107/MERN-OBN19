@@ -4,6 +4,7 @@ import Landing from './Pages/Landing'
 import AllRestaurants from './Pages/AllRestaurants'
 import { useDispatch } from 'react-redux'
 import { getData } from './Utils/LocationSlice'
+import RecommendedRestaurants from './Pages/RecommendedRestaurants'
 
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Landing />} />
         <Route path='/restaurants' element={<AllRestaurants />} />
+        <Route path='/restaurants/:id' element={<RecommendedRestaurants />} />
       </Routes>
 
 
