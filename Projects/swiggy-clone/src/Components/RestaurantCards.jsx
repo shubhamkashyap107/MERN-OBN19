@@ -3,14 +3,14 @@ import { useNavigate } from 'react-router-dom'
 
 const RestaurantCards = ({info, url, size}) => {
     const nav = useNavigate()
-    const{avgRatingString, cloudinaryImageId, cuisines, areaName, name} = info.info
+    const{avgRatingString, cloudinaryImageId, cuisines, areaName, name, id} = info.info
     const time = info.info.sla.slaString
 
     
   return (
     <article 
     onClick={() => {
-        nav("/menu/123456")
+        nav(`/menu/${id}`)
     }}
     className={'shrink-0 ' + (size == "lg" ? "w-75" : "w-55")}>
         <img className={'w-full rounded-3xl ' + (size == "lg" ? "h-50" : "h-40")} src={url + cloudinaryImageId} alt="" />
