@@ -78,7 +78,7 @@ router.delete("/:id", (req,res) => {
 
         res.json({
             msg : "Done",
-            data : todos
+            // data : todos
         })
         
     } catch (error) {
