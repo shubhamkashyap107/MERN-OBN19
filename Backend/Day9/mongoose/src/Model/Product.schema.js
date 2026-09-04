@@ -19,6 +19,19 @@ const productSchema = new mongoose.Schema({
     // }
 }, {timestamps : true})
 
+
+
+productSchema.pre("save", function() {
+    console.log("1. PRE SAVE");
+
+    // intentionally don't call next()
+});
+
+
+productSchema.post("findOneAndDelete", function(obj) {
+    console.log(obj.name, "Deleted")
+})
+
 const Product = mongoose.model("Product", productSchema)
 
 

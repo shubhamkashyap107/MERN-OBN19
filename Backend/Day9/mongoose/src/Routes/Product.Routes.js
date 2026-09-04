@@ -2,38 +2,59 @@ const express = require("express")
 const router = express.Router()
 const{ Product } = require("../Model/Product.schema")
 const { default: mongoose } = require("mongoose")
+const { Logger } = require("../Middelwares/Logger")
+
+
+// router.post("/", async(req, res) => {
+//     try {
+//         const{ name, price } = req.body
+
+
+//         // if(!name || name.length < 10)
+
+//         // const val =  await Product.create({name, price}) // validation ran
+
+//         const val = new Product({ // validation ran
+//             name, price
+//         })
+//         await val.save()
+
+//         // const val = await Product.insertMany([{name, price},{name, price},{name, price},])
+//         // const val = await Product.insertOne({name, price}) // validation ran
+
+
+//         res.json({
+//             data : val
+//         })
+
+//     } catch (error) {
+//         res.json({
+//             err : error.message
+//         })
+//     }
+// })
 
 
 
-router.post("/", async(req, res) => {
-    try {
-        const{ name, price } = req.body
 
+router.post("/", async (req, res) => {
+    console.log("2. API started");
 
-        // if(!name || name.length < 10)
+    const val = new Product({
+        name: req.body.name,
+        price: req.body.price
+    });
 
-        const val =  await Product.create({name, price}) // validation ran
+    console.log("3. Before save");
 
-        // const val = new Product({ // validation ran
-        //     name, price
-        // })
-        // await val.save()
+    await val.save();
 
-        // const val = await Product.insertMany([{name, price},{name, price},{name, price},])
-        // const val = await Product.insertOne({name, price}) // validation ran
+    console.log("4. After save");
 
-
-        res.json({
-            data : val
-        })
-
-    } catch (error) {
-        res.json({
-            err : error.message
-        })
-    }
-})
-
+    res.json({
+        data: val
+    });
+});
 
 
 
@@ -73,12 +94,15 @@ router.get("/", async(req, res) => {
 
 
 
-router.delete("/", async(req, res) => {
+router.delete("/:id", async(req, res) => {
     try {
+
+        const{id} = req.params
+
         // const deletedVal = await Product.deleteOne({price  : 1000})
         // const deletedVal = await Product.deleteMany({price  : 1000})
         // const deletedVal = await Product.findOneAndDelete({price : 1000})
-        // const deletedVal = await Product.findByIdAndDelete("6a9952e47021e5aac8d3b9fe")
+        const deletedVal = await Product.findByIdAndDelete(id)
 
 
 
@@ -134,6 +158,59 @@ router.patch("/:id", async(req, res) => {
         })
     }
 })
+
+
+// router.get("/testing", Logger, async(req, res) => {
+//     try {
+
+//         const{ price, brand } = req.query
+
+//         console.log(req.gabbar)
+
+//         // const data = await Product.find({price : {$lt : price}})
+//         // const data = await Product.find({price : {$lte : price}}) 
+//         // const data = await Product.find({price : {$gt : price}}) 
+//         // const data = await Product.find({price : {$gte : price}}) 
+//         // const data = await Product.find({price : {$ne : price}}) 
+//         // const data = await Product.find({price : {$eq : price}}) 
+//         // const data = await Product.find({tags : {$in : [brand, ""]}}) 
+//         // const data = await Product.find({tags : {$nin : [brand]}}) 
+
+
+//         // const data = await Product.find({tags : {$in : ["apple"]}}) 
+
+
+//         // if(Tags.include("apple") && cat == "elec")
+
+
+//         // const data = await Product.find({
+//         //     $and : [
+//         //         {brand : "Apple"},
+//         //         {category : "Electronics"}
+//         //     ]
+//         // })
+
+
+//         // const data = await Product.find({
+//         //     $or : [
+//         //         {brand : "Apple"},
+//         //         {category : "Electronics"},
+//         //     ]
+//         // })
+
+//         const data = await Product.find({
+//             price : {$not : {$lt : 50000}}
+//         })
+
+        
+
+//         res.json({data})
+//     } catch (error) {
+//         res.json({
+//             err : error.message
+//         })
+//     }
+// })
 
 
 
