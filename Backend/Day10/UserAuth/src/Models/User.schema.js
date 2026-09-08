@@ -49,7 +49,12 @@ const UserSchema = new mongoose.Schema({
         required : true,
         trim : true
     },
-    blogs : [],
+    blogs : [
+        {
+            type : mongoose.Schema.Types.ObjectId,
+            ref : "Blog"
+        }
+    ],
     gender : {
         type : String,
         required : true,
@@ -58,7 +63,8 @@ const UserSchema = new mongoose.Schema({
             values : ["male", "female", "others"],
             message : "{VALUE} is not a valid gender"
         },
-    }
+    },
+    
 })
 
 

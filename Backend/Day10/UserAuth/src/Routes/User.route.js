@@ -38,7 +38,6 @@ router.post("/signup", async(req, res) => {
     }
 })
 
-
 router.post("/login", async(req, res) => {
     try {
         const{ username, email , password} = req.body
@@ -54,7 +53,7 @@ router.post("/login", async(req, res) => {
                 {username},
                 {email}
             ]
-        })
+        }).populate("blogs")
 
 
         if(!foundUser)
@@ -72,7 +71,7 @@ router.post("/login", async(req, res) => {
 
 
         const token = jwt.sign({id : foundUser._id}, process.env.JWT_SECRET, {expiresIn : "1d"}) // {id : aesrdtygfewqfghfd}
-
+        // obj + secret => token + secret => obj
         // res.status()
         // res.cookie("example", "hehe")
 
